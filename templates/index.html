@@ -1,0 +1,102 @@
+{% extends 'layout.html' %}
+{% block body %}
+<style>
+   body {
+       margin: 0;
+       background-image: url(static/images/banner_index.jpg);
+       background-repeat: repeat; /* Faz com que a imagem de fundo se repita */
+       background-size: auto;
+   }
+
+   .jumbotron {
+       background-color: rgb(242, 163, 27); /* Fundo levemente transparente */
+       padding: 50px;
+       border-radius: 10px;
+       z-index: 1;
+       position: relative;
+   }
+
+   .text-content {
+       font-family: Arial, sans-serif; /* Fonte fácil de ler */
+       font-size: 24px; /* Tamanho grande para facilitar a leitura */
+       color: #000; /* Cor preta para o texto */
+       text-align: justify; /* Justificação do texto */
+       padding: 20px;
+       line-height: 1.6; /* Altura da linha para melhorar a legibilidade */
+       background-color: rgb(241, 230, 188); /* Fundo branco suave para contraste */
+       border-radius: 10px;
+       margin: 20px;
+   }
+
+   .text-content p {
+       text-indent: 50px; /* Recuo no início do parágrafo */
+   }
+
+   .button-container {
+       display: flex;
+       justify-content: center;
+       margin-top: 20px; /* Espaço entre o texto e o botão */
+   }
+
+   .btn-primary {
+       background-color: rgba(232, 246, 142, 1);
+       color: #040404;
+       z-index: 10;
+       position: relative;
+       border-color: #000000;
+       font-size: 34px;
+       padding: 10px 60px;
+   }
+
+   .btn-primary:hover {
+       background-color: #0095ff;
+       border-color: #5a3e2e;
+   }
+
+   /* Adiciona a animação de fade-in */
+   .fade-in {
+       opacity: 0;
+       transition: opacity 1s ease-in;
+   }
+
+   .fade-in-visible {
+       opacity: 1;
+   }
+</style>
+
+<div class="jumbotron text-center fade-in">
+   <p class="lead" style="font-size: 50px;">Práticas para as relações étnicos-raciais</p>
+</div>
+
+<div class="text-content fade-in">
+   <p>Esse mapa nasceu da vontade de quatro mulheres em encontrar boas práticas educacionais nas escolas da rede pública na cidade de São Paulo. Mas não qualquer tipo de ação pedagógica, estamos falando aqui de escolas que valorizem a diversidade cultural brasileira e as diferenças existentes no nosso país, uma vez que, fazem parte da constituição da nossa sociedade, já que o Brasil tem suas origens negra e indígena.
+   Nossas vivências e experiências pessoais e na graduação levam-nos a ter interesse na temática antirracista e por isso defendemos a importância de garantir que as(os) estudantes tenham acesso à diversidade étnico-cultural durante seus processos de aprendizagem na educação básica. Na nossa perspectiva, apesar de já ser garantido por lei, não é toda escola que promove tais práticas com qualidade e, por darmos falta de encontrar boas referências, a situação nos motiva a desenvolver esse site.</p>
+   <p>Nos segmentos da EI a escola tem um papel fundamental na formação da personalidade, na construção da inteligência e a aprendizagem da criança, “portanto esses espaços coletivos educacionais são espaços privilegiados para promover a eliminação de qualquer forma de preconceito, racismo e discriminação, fazendo com que as crianças, desde muito pequenas, compreendam e se envolvam conscientemente em ações que conheçam, reconheçam e valorizem a importância dos diferentes grupos etnicorraciais para a história e a cultura brasileiras” (BRASIL, 2008, p.49). Para além da EI, é na EJA que se percebe que os adolescentes e adultos que retornam para a educação básica foram de certa forma expulsos do sistema de ensino regular e por isso demandam maior atenção e acolhimento, no processo educacional. 
+   Nosso desejo é que após um mergulho nas escolas que vão aparecer como referência aqui nesse site, cada educador possa revisitar suas práticas com a intenção de refletir o lugar político de nosso trabalho e a potência emancipatória de nossas práticas pautadas na garantia do direito à diversidade. Para além disso, cada família possa conhecer o que cada escola tem a oferecer para o processo educacional de cada indivíduo.
+   Pensar na inserção política e pedagógica da questão racial nas escolas significa muito mais do que ler livros e manuais informativos. Representa alterar os valores, a dinâmica, a lógica, o tempo, o espaço, o ritmo e a estrutura das escolas. Significa dar subsídios aos professores, colocá-los em contato com as discussões mais recentes sobre os processos educativos, culturais, políticos…” (GOMES, p. 152)</p>
+</div>
+
+<div class="button-container fade-in">
+   <a href="/mapa" class="btn btn-primary btn-lg">Mapa da cidade de São Paulo</a>
+</div>
+
+<div class="text-content fade-in">
+    <h1>COMO CHEGAMOS A ESSAS ESCOLAS?</h1> 
+    <p>Esse mapa nasceu da vontade de quatro mulheres em encontrar boas práticas educacionais nas escolas da rede pública na cidade de São Paulo. Mas não qualquer tipo de ação pedagógica, estamos falando aqui de escolas que valorizem a diversidade cultural brasileira e as diferenças existentes no nosso país, uma vez que, fazem parte da constituição da nossa sociedade, já que o Brasil tem suas origens negra e indígena.
+     Nossas vivências e experiências pessoais e na graduação levam-nos a ter interesse na temática antirracista e por isso defendemos a importância de garantir que as(os) estudantes tenham acesso à diversidade étnico-cultural durante seus processos de aprendizagem na educação básica. Na nossa perspectiva, apesar de já ser garantido por lei, não é toda escola que promove tais práticas com qualidade e, por darmos falta de encontrar boas referências, a situação nos motiva a desenvolver esse site.</p>
+    <p>Nos segmentos da EI a escola tem um papel fundamental na formação da personalidade, na construção da inteligência e a aprendizagem da criança, “portanto esses espaços coletivos educacionais são espaços privilegiados para promover a eliminação de qualquer forma de preconceito, racismo e discriminação, fazendo com que as crianças, desde muito pequenas, compreendam e se envolvam conscientemente em ações que conheçam, reconheçam e valorizem a importância dos diferentes grupos etnicorraciais para a história e a cultura brasileiras” (BRASIL, 2008, p.49). Para além da EI, é na EJA que se percebe que os adolescentes e adultos que retornam para a educação básica foram de certa forma expulsos do sistema de ensino regular e por isso demandam maior atenção e acolhimento, no processo educacional. 
+     Nosso desejo é que após um mergulho nas escolas que vão aparecer como referência aqui nesse site, cada educador possa revisitar suas práticas com a intenção de refletir o lugar político de nosso trabalho e a potência emancipatória de nossas práticas pautadas na garantia do direito à diversidade. Para além disso, cada família possa conhecer o que cada escola tem a oferecer para o processo educacional de cada indivíduo.
+     Pensar na inserção política e pedagógica da questão racial nas escolas significa muito mais do que ler livros e manuais informativos. Representa alterar os valores, a dinâmica, a lógica, o tempo, o espaço, o ritmo e a estrutura das escolas. Significa dar subsídios aos professores, colocá-los em contato com as discussões mais recentes sobre os processos educativos, culturais, políticos…” (GOMES, p. 152)</p>
+ </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const elements = document.querySelectorAll('.fade-in');
+        elements.forEach((el, index) => {
+            setTimeout(() => {
+                el.classList.add('fade-in-visible');
+            }, index * 500); // Cada bloco aparece com 1 segundo de intervalo
+        });
+    });
+</script>
+{% endblock %}

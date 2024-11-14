@@ -1,0 +1,103 @@
+{% extends 'layout.html' %}
+{% block body %}
+<style>
+   body {
+       margin: 0;
+       background-image: url(static/images/banner_index.jpg);
+       background-repeat: repeat; /* Faz com que a imagem de fundo se repita */
+       background-size: auto;
+   }
+
+   .jumbotron {
+       background-color: rgb(242, 163, 27); /* Fundo levemente transparente */
+       padding: 50px;
+       border-radius: 10px;
+       z-index: 1;
+       position: relative;
+   }
+
+   .text-content {
+       font-family: Arial, sans-serif; /* Fonte fácil de ler */
+       font-size: 24px; /* Tamanho grande para facilitar a leitura */
+       color: #000; /* Cor preta para o texto */
+       text-align: justify; /* Justificação do texto */
+       padding: 20px;
+       line-height: 1.6; /* Altura da linha para melhorar a legibilidade */
+       background-color: rgb(241, 230, 188); /* Fundo branco suave para contraste */
+       border-radius: 10px;
+       margin: 20px;
+   }
+
+   .text-content p {
+       text-indent: 50px; /* Recuo no início do parágrafo */
+   }
+
+   .button-container {
+       display: flex;
+       justify-content: center;
+       margin-top: 20px; /* Espaço entre o texto e o botão */
+   }
+
+   .btn-primary {
+       background-color: rgba(232, 246, 142, 1);
+       color: #040404;
+       z-index: 10;
+       position: relative;
+       border-color: #000000;
+       font-size: 34px;
+       padding: 10px 60px;
+   }
+
+   .btn-primary:hover {
+       background-color: #0095ff;
+       border-color: #5a3e2e;
+   }
+
+   /* Adiciona a animação de fade-in */
+   .fade-in {
+       opacity: 0;
+       transition: opacity 1s ease-in;
+   }
+
+   .fade-in-visible {
+       opacity: 1;
+   }
+</style>
+
+<div class="jumbotron text-center fade-in">
+   <p class="lead" style="font-size: 50px;">Referencial Teórico</p>
+</div>
+
+<div class="text-content fade-in">
+   <li>Rita Potiguara </li>
+   <p>Rita Potiguara, também conhecida como Rita Gomes do Nascimento, é graduada em Pedagogia e Especialista em Gestão Escolar pela Universidade Estadual do Ceará (UECE), Rita Nascimento é mestre e doutora em Educação pela Universidade Federal do Rio Grande do Norte (UFRN), com pesquisas de dissertação e tese sobre educação escolar indígena. Já foi professora da rede pública estadual do Ceará e coordenadora geral da Educação Escolar Indígena na Secretaria de Educação Continuada, Alfabetização, Diversidade e Inclusão (Secadi/MEC). Ela fala sobre a importância da ampliação da presença de indígenas nos espaços de gestão das políticas públicas, sobre as políticas atuais voltadas para a educação escolar indígena e para a educação das relações étnico-raciais no Brasil.
+</p><br>
+<li>Nilma Lino </li>
+<p>Nilma Lino Gomes nasceu em Belo Horizonte, Minas Gerais em 1961. Pedagoga, gestora, escritora,  intelectual. Tem a trajetória marcada pelo pioneirismo de ser a primeira mulher negra do Brasil a comandar uma universidade pública federal: em 2013, é nomeada reitora da Universidade da Integração Internacional da Lusofonia Afro-Brasileira (Unilab), localizada na cidade de Redenção, Ceará. Suas publicações incluem desde livros e artigos resultados de pesquisas de campo e voltados para o público universitário até narrativas de ficção destinadas para crianças e jovens.
+</p><br>
+<li>Carla Akotirene</li>
+<p>Carla Akotirene nasceu em Salvador, Bahia no ano de 1980. É bacharela em Serviços Sociais, Mestra e Doutora em Estudos Interdisciplinares de Gênero, Mulheres e Feminismo pela Universidade Federal da Bahia. Suas pesquisas e livros são pautados no feminismo negro, trazendo análises de como mulheres negras são afetadas pelo racismo e sexismo, interseccionalidade entre raça e gênero, também atravessadas pelas condições sociais em que elas são colocadas dentro da sociedade em que vivemos. Seus estudos têm foco maior nos sistemas carcerários brasileiros. </p>
+<br>
+<li>Véra Neusa Lopes</li>
+<p>Véra Neusa Lopes é professora e Técnica em Educação do Estado do Rio Grande do Sul. Bacharela e licenciada em Ciências Sociais na PUCRS, possui especialização em Planejamento da Educação. Sempre esteve envolvida na área educacional, mesmo depois de aposentada, levantando a bandeira e abordando práticas antirracistas em busca de uma educação equitativa. 
+</p><br>
+<li>Paulo Freire  1921 – 1997</li>
+<p>Patrono da Educação Brasileira. Educador, filósofo, um dos pensadores mais notáveis na história da Pedagogia Mundial. Sua obra mais conhecida “Pedagogia do Oprimido”, trouxe conceitos como conscientização e educação libertadora, que capacitasse os oprimidos a entender e transformar sua sociedade. Desenvolveu um método onde em Angicos, no Rio Grande do Norte, alfabetizou 300 cortadores de cana-de-açúcar em 45 dias. O método de Paulo Freire é conhecido por ser um marco evolutivo na educação e alfabetização, não só no Brasil, mas também no mundo.</p>
+<br>
+<li>Kabengele Munanga 1940</li>
+<p>Foi o primeiro antropólogo da República Democrática do Congo e se naturalizou brasileiro aos 43 anos. As situações de racismo e discriminação experimentadas por Munanga no Brasil marcaram definitivamente sua produção acadêmica e temas de pesquisa, estudando escrevendo e discutindo sobre racismo, identidade negra, negritude, multiculturalismo, educação e relações étnico-raciais, políticas antirracistas.
+</p>
+
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const elements = document.querySelectorAll('.fade-in');
+        elements.forEach((el, index) => {
+            setTimeout(() => {
+                el.classList.add('fade-in-visible');
+            }, index * 500); // Cada bloco aparece com 1 segundo de intervalo
+        });
+    });
+</script>
+{% endblock %}

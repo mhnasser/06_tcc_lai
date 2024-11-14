@@ -1,0 +1,494 @@
+{% extends 'layout.html' %}
+{% block body %}
+<button class="btn-arrow" onclick="window.location.href='/mapa'">&#8592; Ir para o mapa</button>
+<style>
+   body {
+       margin: 0;
+       background-image: url(static/images/banner_index.jpg);
+       background-repeat: repeat; /* Faz com que a imagem de fundo se repita */
+       background-size: auto;
+   }
+
+   .jumbotron {
+       background-color: rgba(232, 246, 142, 0.9); /* Fundo levemente transparente */
+       padding: 50px;
+       border-radius: 10px;
+       z-index: 1;
+       position: relative;
+   }
+
+   .text-content {
+       font-family: Arial, sans-serif; /* Fonte fácil de ler */
+       font-size: 24px; /* Tamanho grande para facilitar a leitura */
+       color: #000; /* Cor preta para o texto */
+       text-align: justify; /* Justificação do texto */
+       padding: 20px;
+       line-height: 1.6; /* Altura da linha para melhorar a legibilidade */
+       background-color: rgba(241, 230, 188); /* Fundo branco suave para contraste */
+       border-radius: 10px;
+       margin: 20px;
+   }
+
+   .text-content p {
+       text-indent: 50px; /* Recuo no início do parágrafo */
+   }
+
+   .button-container {
+       display: flex;
+       justify-content: center;
+       margin-top: 20px; /* Espaço entre o texto e o botão */
+   }
+
+   .btn-primary {
+       background-color: rgba(232, 246, 142, 1);
+       color: #040404;
+       z-index: 10;
+       position: relative;
+       border-color: #000000;
+       font-size: 34px;
+       padding: 10px 60px;
+   }
+
+   .btn-primary:hover {
+       background-color: #0095ff;
+       border-color: #5a3e2e;
+   }
+   .btn-arrow {
+        position: fixed;
+        top: 60px;
+        left: 20px;
+        background-color: rgba(232, 246, 142); /* Mesma cor de fundo levemente transparente */
+        border: none;
+        color: #000;
+        padding: 10px 15px;
+        font-size: 24px;
+        cursor: pointer;
+        text-align: center;
+        z-index: 1000; /* Para ficar acima dos outros elementos */
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Espaço entre a seta e o texto */
+    }
+
+    .btn-arrow:hover {
+        background-color: #0095ff;
+        color: white;
+    }
+</style>
+
+<div class="text-content">
+    <h1>CIEJA Perus - TERRITÓRIO</h1> 
+    <br>
+    <p>  O CIEJA Perus foi criado em 2017 por um grupo de pessoas, que atualmente estão na gestão da instituição, e que se conheceram através da gestão do prefeito Haddad (2013-2016). 
+        Já se sabia que na região uma das questões mais latentes era o alto índice de analfabetismo. Então o CIEJA foi pensado por essas pessoas que já tinham consciência do retrato da EJA 
+        no Brasil. Por isso que em 2024, depois de anos de construção e alinhamento da equipe e da estrutura da escola, nós decidimos conhecer as práticas educacionais encontradas lá. 
+        Cada mínimo detalhe da estrutura é pensado para que todos os estudantes se sintam respeitados e valorizados. A escola, vive com seus portões abertos, 
+        faz questão de dialogar com o território e todos que moram ao seu entorno, uma vez que diariamente convida seus 
+        estudantes para uma verdadeira experiência educacional. Além de priorizar a alfabetização e os conhecimentos disciplinares, 
+        também promove muitas reflexões para romper com o racismo estrutural da sociedade, construir uma cultura escolar de respeito, 
+        coletividade e boa convivência entre funcionários, estudantes e o território.</p>
+    <p> <b><em>“Se a gente tivesse justiça social a gente teria homens e mulheres negros e negras em todas as profissões, 
+        isso é muito mais fruto do racismo estrutural que alimenta o capitalismo, do que ter a ver com a pessoa.”</em></b>  <br>
+        Sheila Coelho, Coordenadora Pedagógica
+    <br><br>
+    <b>Endereço:</b> Rua Francisco José de Barros 160 166, São Paulo, SP, 05211-150 <br>
+    <b>Telefone:</b> (11) 3917-7953 <br>
+    <a href="https://www.instagram.com/ciejaperus/profilecard/?igsh=MW1kd3Vxb2o1d3J1cQ==" target="_blank" style="font-size: 24px; color: blue;">Instagram</a> <br>
+    <h2>Dialogando com o território: </h2> 
+    <p>  Quando o CIEJA nasceu, a equipe docente se propôs a estudar o território e suas lutas populares. Perus sempre foi um bairro tratado como “Quarto de despejo”, 
+        referenciando Carolina Maria de Jesus. Era um lugar que abrigava um cemitério, que foi utilizado durante a ditadura para descartar corpos em uma vala clandestina, 
+        um lixão público e a fábrica de cimento Portland, que foi comandada por uma gestão que não investiu na infraestrutura e acarretou diversos problemas respiratórios 
+        para as pessoas da região. Além disso, o bairro tinha uma taxa muito alta de pessoas não alfabetizadas.</p>
+    </p>
+    <p>  Mas também foi território de muitas lutas, como a luta pelo fechamento do lixão e a greve dos operários da fábrica Portland por melhores condições de trabalho, 
+        que durou 7 anos e teve uma vitória popular. É uma região com um histórico de muita luta e resistência.</p>
+    <p> <b><em>“Eles reivindicam escola, posto de saúde, movimento de moradia, tudo o que tem aqui em Perus é fruto de luta popular”</em></b> <br>
+         Sheila Coelho, Coordenadora Pedagógica</p><br>
+    <div style="text-align: center;">
+        <img src="static/images/ceija_perus/1.jpg" width="500" height="330"/>
+        <p style="font-size: 20px;">Fonte: acervo pessoal, 2024.</p>
+    </div>
+    <h3><b>A cara do CIEJA Perus:</b></h3> 
+    <p>Quem são os estudantes da EJA no Brasil? No Cieja Perus, a gestão trabalha de forma a afirmar o sujeito político presente em cada um, 
+        os educadores garantem a alfabetização respeitando todos os processos individuais dos estudantes.</p>
+    <p>Existe uma grande diversidade de pessoas e culturas dentro da instituição, seja no corpo de funcionários, 
+        professores e nos estudantes, uma vez que metade do CIEJA Perus é composto por alunos haitianos.</p>
+    <p>“Quem representaria a beleza do CIEJA Perus é uma mulher negra.”</p>
+    <div style="text-align: center;">
+        <img src="static/images/ceija_perus/2.jpg" width="500" height="330"/>
+        <p style="font-size: 20px;">Mural com uma representação de uma mulher negra que foi pintado por um artista local chamado Dinas Miguel<br>
+            Fonte: acervo pessoal, 2024.
+            </p>
+    </div>
+    <h3><b>Projeto Mulheres Reais</b></h3>
+    <p> Esta prática tem como objetivo refletir e desconstruir estereótipos do que é a mulher bonita para a nossa sociedade. 
+        Através de alguns questionamentos, como por exemplo, quais mulheres são as mulheres bonitas e como elas são? Precisou ser trabalhado bastante imagens, 
+        de como são as mulheres nas revistas, de como são as mulheres na mídia, analisar propagandas, uma vez que quando vai vender algum produto de beleza, 
+        qual é a beleza que vai aparecer? Depois teve um trabalho com fotos, que consiste em uma sessão de fotos dos/das estudantes e uma exposição dessas fotos. 
+        Para no fim novamente refletir com eles/elas qual é a beleza do CIEJA. Quem representaria a beleza do CIEJA seria uma mulher negra
+    </p>
+    <h3><b>Porta das salas</b></h3>
+    <p>Cada sala de aula recebe o nome e a imagem de uma mulher, em sua maioria mulheres negras ou indígenas.</p>
+    <div style="text-align: center;">
+        <img src="static/images/ceija_perus/3.jpg" style="width: 30%; height: auto;"/>
+        <p style="font-size: 20px;">Fonte: acervo pessoal, 2024.</p>
+    </div>
+    <p> <b><em>“A gente sabe que desconstruir preconceito não é algo que você faz em uma aula, uma intervenção. 
+        Mas eu penso que o fato deles terem noção de que aqui dentro não pode vem muito disso que é da cultura do lugar.”</em></b><br>  Sheila Coelho, Coordenadora Pedagógica</p><br>
+
+    <div id="local1"><h1>EMEI Sangirardi - QUINTAL DE DESCOBERTA</h1></div>
+    <br>
+    <p>A EMEI Sangirardi encanta o nosso olhar quando entramos em seu território. Com um espaço enorme e cheio de natureza, 
+        a instituição promove um descanso aos olhos e uma vivência muito rica da infância, possibilitando viver múltiplas experiências. 
+        Ao ler o Projeto Político Pedagógico, com toda sua estética, poética e intencionalidade, entendemos que a escola precisaria entrar nesse site. 
+        A sua concepção de criança, infância e educação traz as relações étnicos raciais e de gênero como algo essencial e indissociável da sua prática. 
+        A gestão trabalha e debate o tema com os professores que se inspiram nessas formações para elaborar práticas com as crianças. </p>
+    <br>
+    <b>Endereço:</b> Rua Leonor Domingues, 244 - Jardim Hercília <br>
+    <b>Telefone:</b> 2749 - 1667 <br>
+
+    <h3><b>Práticas e organizações dos espaços que conversem com a temática da pesquisa: Gizes tons de pele</b></h3>
+    <p>Os gizes tons de pele é um material que está presente em todas as salas de referência da EMEI Sangirardi. 
+        Após formações sobre as relações etnico-raciais e muito debate com os professores sobre o assunto, 
+        os gizes tons de pele são explorados com atenção e cuidado pelas professoras. Ao ofertá-los, as mesmas preparam o ambiente com intencionalidade, 
+        fazendo com que as crianças explorem o material até encontrarem o seu tom de pele, o tom de pele do amigo, o tom de pele da professora 
+        e de outros adultos da escola. 
+    </p><br>
+    <div style="text-align: center;">
+        <img src="static/images/emei_sangirardi/1.jpg" style="width: 50%; height: auto;"/>
+        <p style="font-size: 20px;">Fonte: Acervo pessoal da educadora da EMEI Cardim Sangirardi, 2024.</p>
+    </div>
+    <h3><b>Literatura</b></h3>
+    <p>Todas as salas possuem um acervo de livros com essa temática. Livros sobre as relações etnico raciais 
+        e com protagonistas negros e indígenas estão sempre presentes na sala de referência e são utilizados 
+        também no momento da Leitura Silmultânea ou no empréstimo de livros.  
+    </p>
+    <h3><b>Proposta Ciranda das Cores</b></h3>
+    <p>Iniciou-se a partir de uma construção de um painel com imagens de crianças negras e personalidades como Djamila Ribeiro, 
+        Sueli Carneiro, Milton Santos, Carolina Maria de Jesus, Conceição Evaristo. No decorrer da montagem algumas crianças foram se 
+        identificando com algumas imagens, e encostaram as figuras próximas ao rosto. Ao explorar os gizes tons de pele com as crianças e 
+        perceber seu entusiasmo com a investigação sobre sua cor, foi desenvolvido a proposta ciranda das cores onde a professora mapeou as 
+        tonalidades de pele de cada criança e produziu cartazes sobre o assunto. Ao encontrarem o tom que mais se assemelhava a sua pele, 
+        rapidamente pintavam uma filipeta e colocavam a sua representação na grande ciranda. No Dia da Família, as mesmas puderam passar pela 
+        mesma experiência de descobrir seu tom de pele e fazer uma ciranda das cores.   
+    </p>
+    <div style="text-align: center;">
+        <img src="static/images/emei_sangirardi/2.png" style="width: 50%; height: auto;"/>
+        <p style="font-size: 20px;">Fonte: Acervo pessoal da educadora da EMEI Cardim Sangirardi, 2024.</p>
+    </div>  <br>
+    <p> <b><em>“Acho que primeiramente, nós temos leis que determinam que a escola precisa trabalhar as questões étnico-raciais, 
+        as questões ligadas aos povos originários cotidianamente, devido a uma reparação histórica de direitos que foram tirados dessas 
+        populações. E também com a questão de ter um currículo colonizador do ponto de vista de uma única história sobre o que aconteceu 
+        com os negros ou com os indígenas e que vem acontecendo historicamente no nosso país. Essas leis vêm no sentido de ampliar essa visão,
+         tirar essa única história que era contada, trazer mais clareza sobre as questões das pessoas que foram escravizadas no nosso país e 
+         das pessoas também que foram exterminadas quando os portugueses por aqui chegaram, que foram a questão dos indígenas e também de pessoas
+          pretas escravizadas.”</em></b><br> Coordenadora Pedagógica da EMEI Sangirard</p><br>	 	
+    <div style="text-align: center;">
+    <img src="static/images/emei_sangirardi/3.png" style="width: 50%; height: auto;"/>
+    <p style="font-size: 20px;">Fonte: Projeto Político-Pedagógico EMEI Cardim Sangirardi, 2024.</p>
+    </div> <br>
+    <div style="text-align: center;">
+    <img src="static/images/emei_sangirardi/4.jpg" style="width: 50%; height: auto;"/>
+    <p style="font-size: 20px;">Fonte: Projeto Político-Pedagógico EMEI Cardim Sangirardi, 2024.</p>
+    </div> <br>     
+    <h2>Dialogando com o território: </h2> 
+    <p>A EMEI Sangirardi, assim como toda escola, recebe todos os anos, novas crianças e famílias em seu território. 
+        Muitas delas vêm de outros territórios, sejam eles nacionais ou internacionais. Essa  singularidade,  subjetividade e  
+        diversidade das pessoas que fazem parte deste território possibilita a escuta de suas vozes e com isso ampliar os princípios de inclusão, 
+        equidade e integralidade para as crianças desta Escola da Infância. </p>   
+    <p>O diálogo com o território acontece também quando a EMEI faz a opção de manter seus portões abertos aos finais de semana, 
+        possibilitando que diversas pessoas usufruam de seu espaço amplo, de seus mobiliários e de todo seu quintal. </p><br>
+    <h3><b>A cara da EMEI Sangirardi:</b></h3>
+    <p> <b><em>“Acho que primeiramente, nós temos leis que determinam que a escola precisa trabalhar as questões étnico-raciais, 
+        as questões ligadas aos povos originários cotidianamente, devido a uma reparação histórica de direitos que foram tirados dessas 
+        populações. E também com a questão de ter um currículo colonizador do ponto de vista de uma única história sobre o que aconteceu 
+        com os negros ou com os indígenas e que vem acontecendo historicamente no nosso país. Essas leis vêm no sentido de ampliar essa visão,
+         tirar essa única história que era contada, trazer mais clareza sobre as questões das pessoas que foram escravizadas no nosso país e 
+         das pessoas também que foram exterminadas quando os portugueses por aqui chegaram, que foram a questão dos indígenas e também de pessoas
+          pretas escravizadas.”</em></b><br> Coordenadora Pedagógica da EMEI Sangirard</p><br>
+    <div style="text-align: center;">
+    <img src="static/images/emei_sangirardi/5.jpg" style="width: 60%; height: auto;"/>
+    <p style="font-size: 20px;">Fonte: Projeto Político-Pedagógico EMEI Cardim Sangirardi, 2024.</p>
+    </div> <br>
+    <div id="local2"><h1>CIEJA Cambuci - IDENTIDADE</h1></div>
+    <p>O CIEJA Paulo Emilio Vanzolini, mais conhecido como CIEJA Cambuci, está localizado na região central da cidade de São Paulo, no Cambuci. 
+        Esta característica faz com que a escola seja construída por uma grande diversidade de pessoas. A partir do olhar sensível e atento da diretora, 
+        quando presenciou uma conversa homofóbica, surgiu a necessidade de repensar a escola no território em que está inserida, partindo de uma perspectiva 
+        identitária. Assim, as práticas escolares passaram a abordar com maior atenção temas sobre gênero, raça e cor. </p>
+        <br>
+        <b>Endereço:</b> R. Cesário Ramalho, 111 - Cambuci, São Paulo - SP, 01521-000 <br>
+        <b>Telefone:</b> (11) 3208-7820 <br>
+        <a href="https://www.instagram.com/ciejacambuci?igsh=MXEyejA0emtmMHFkag==" target="_blank" style="font-size: 24px; color: blue;">Instagram</a> <br>
+    <h3><b>A cara do CIEJA Cambuci:</b></h3>
+    <p>O CIEJA Cambuci é um espaço marcado pelas presenças e culturas das comunidades negras e LGBTQIAPN+, principalmente. 
+        Buscando ser um ambiente acolhedor, é possível ver nas interações que aparecem no dia a dia, nas propostas realizadas 
+        com as turmas, no olhar e fala generosas que são direcionadas às pessoas que procuram a instituição, as diversas posturas 
+        que as educadoras e educadores da escola procuram ter para que cada indivíduo sinta-se bem-vinde e pertencente ao espaço. 
+        É através de encontros com a equipe docente,  no início dos semestres, que a gestão convida todas(os) a pensarem suas práticas 
+        pautadas em um currículo que tenha presente as culturas Africanas, Afrobrasileiras, Indígenas, da comunidade LGBTQIAPN+ e outras 
+        que sejam consideradas importantes para a construção da identidade brasileira. </p>
+    <p>Para além disso, a escola relaciona-se também com o território quando estabelece um diálogo e parcerias com a
+             Escola de Samba Lavapés Pirata Negro, que foi idealizada e fundada, ali mesmo na região, pela Madrinha Eunice, 
+             na época a única mulher que representava o grupo e era nomeada apenas de Escola de Samba Lavapés.</p><br>
+    <h3><b>Projetos</b></h3>  
+    <li>As propostas de leitura elaboradas pela escola (LÊJÁ, Leituraço de Autoras Negras, Sarau) 
+        buscam colocar as pessoas negras em posições diferentes àquela como a história sempre contou: as pessoas escravizadas. 
+        Este projeto mostra-as como são todas detentoras de conhecimentos valiosos e que usam sua escrita e musicalidade para denunciar,
+         trazer pontos de vista de uma mesma história já contada, criar poemas e poesias etc. “Quem foram essas pessoas? 
+         Como elas influenciaram/influenciam a nossa cultura?” são questionamentos que surgem durante os encontros e convidam 
+         as e os estudantes a opinarem sobre o tema da vez.
+    </li>
+    <li>O AfroCIEJA é um evento que acontece durante uma semana na escola para dialogar e refletir todos os 
+        conhecimentos trabalhados durante o ano. Neste encontro são oferecidas atividades de diversas linguagens 
+        para que seja explorado o tema Racismo. Como o CIEJA já tem o hábito de trabalhar artistas, estudiosas(os), 
+        materiais que sejam produzidos por pessoas negras, como acontece nos outros eventos (Sarau, Leituraço de Autoras Negras, 
+        o LÊJÁ, as saídas pedagógicas etc), este momento acaba sendo uma oportunidade para amarrar as ideias trabalhadas e para 
+        que as(os) estudantes possam se sentir pertencentes e se reconhecerem como produtoras(es) de conhecimento. 
+    </li>
+    <li>Durante o ano são organizadas saídas pedagógicas e o Sarau. Neste ano (2024), as saídas que mais ficaram marcadas foram a visita 
+        ao bairro da Liberdade, para conhecer a história que pouco é contada e saber porque o bairro recebeu este nome, 
+        e foram prestigiar a exposição Um defeito de cor que está em cartaz no Sesc Pinheiros. Andando nos corredores 
+        do CIEJA é possível encontrar registros de como essas saídas reverberaram nas(os) estudantes.<br>
+        Já durante os Saraus, é o momento em que todo mundo tem a oportunidade de fazer apresentações nas 
+        diversas modalidades artísticas, passando por toda a diversidade cultural que está presente na escola.
+        </li>
+        <li>No ano de 2024, a escola participou do Festival AfroMinuto. É promovido pela Faculdade Zumbi dos Palmares 
+            e pela Secretaria de Educação de São Paulo. O convite foi feito às/aos estudantes para que pensassem no tema 
+            e planejassem o que seria falado e gravado no vídeo. Para isso, foi preciso discutir com o grupo algumas 
+            questões da população negra presente no Brasil.
+        </li><br>
+        <div id="local6"><h1>CIEJA Campo Limpo - IDENTIDADE</h1> </div>
+        <p>O CIEJA Campo Limpo (CL), localizado na região do Capão Redondo, Zona Sul de São Paulo, atua na região desde 1998. 
+            Foi com a chegada da antiga Coordenadora Geral, a querida Êda Luiz, que o espaço passou a dialogar mais com o 
+            território onde está inserido, criando novos vínculos e formas de ver a educação. Uma reestruturação do currículo 
+            e da organização pedagógica levaram a instituição a ter excelentes resultados educacionais, tornando-se referência 
+            na Educação de Jovens e Adultos. As escolhas que foram feitas há mais de duas décadas reverberam até hoje na educação 
+            que todo o corpo educador do CIEJA CL escolheu para atender a comunidade.</p>
+        <br>
+        <b>Endereço:</b> R. Cabo Estácio da Conceição, 176 - Parque Maria Helena, São Paulo - SP, 05854-060 <br>
+        <b>Telefone:</b> (11) 5816-3701<br>
+        <a href="https://www.instagram.com/ciejacampolimpo?igsh=MXM5eDkxcTRncG42MA==" target="_blank" style="font-size: 24px; color: blue;">Instagram</a> <br>
+    <h3><b>A cara do CIEJA Cambuci:</b></h3>
+    <p>A palavra que escolhemos para definir o CIEJA também está presente no Projeto Político Pedagógico da escola: 
+        acolhimento. Assim que você chega no portão fica difícil de diferenciar de uma casa, afinal, as plantas e a 
+        estrutura trazem o aconchego de um lar. Não é à toa que a escola é reconhecida nacional e internacionalmente pelas 
+        escolhas pedagógicas que faz, incluindo dialogar com o território e culturas locais, entendendo como o espaço educacional 
+        pode atender da melhor maneira possível o público ali presente. Isso tudo diz muito sobre o impacto deste espaço na vida das 
+        pessoas que ali estão, perceptível até mesmo na presença de educandas e educandos que já se formaram, mas não abrem mão de visitar
+        a escola que acolhe e respeita suas identidades.
+    </p><br>
+    <h3><b>Projetos</b></h3>  
+    <li>Incorporou-se ao projeto da escola que todo começo de ano seriam realizadas assembleias para ser decidido no coletivo qual seria o 
+        tema gerador do ano. Essa prática traz para as vivências uma percepção democrática da educação, colocando as educandas e educandos 
+        em posição de tomada de decisão, participando nas escolhas dos caminhos educativos que serão trilhados por elas e eles. </li>
+    <li>Desde as mudanças realizadas pela gestão, a escola pensa suas práticas pautadas na população atendida, 
+        majoritariamente negra. Em 2004, a partir da Lei 10.639/2003, o professor Antônio passa a convidar o grupo 
+        educador a pensarem em práticas (bate-papo, eventos, conversas) que sejam pautadas nas questões das relações 
+        étnico-raciais, nascendo assim o Seminário Étnico-Racial: desconstruindo e construindo olhares. Este evento passa 
+        a ser organizado anualmente e tem grande importância e influência na escola. São propostas diversas atividades para
+         toda a comunidade escolar, trazendo especialistas que abordam as interseccionalidades que se encontram na temática 
+         das relações étnico-raciais e dialogam diretamente com as atividades já realizadas durante todo o ano. Pesquisadoras
+          e pesquisadores da área, como o professor doutor Kabengele Munaga, a professora doutora Waldete Tristão, o professor 
+          doutor Roberto da Silva, entre outras(os), estiveram presentes nestes encontros para que pudessem colaborar em uma construção 
+          e enriquecimento dos assuntos para o território, sempre dialogando com os conhecimentos ali já construídos. </li><br>
+
+    <div id="local3"><h1>EMEI Cruz e Sousa - PERSONALIDADE</h1></div>
+    <p>Desde 2014 que a EMEI foi cutucada a repensar suas práticas, a partir de um programa de incentivo da gestão 
+        do Haddad na prefeitura, chamado Leituraço. Esse incômodo da gestão proporcionou uma grande discussão entre 
+        os educadores para encontrar mais livros de autores afro-brasileiros, africanos e indígenas. Mas não parou por aí,
+         a gestão começou a se formar a fim de trabalhar com mais qualidade todos os materiais e depois dos livros começaram
+          a repensar materiais, projetos e até eventos da comunidade escolar. 
+        O resultado de um amplo trabalho de formação com toda a equipe da escola culminou em um grande projeto que surgiu e
+         ganhou muita força com as crianças da EMEI. É por valorizar novas histórias, autores e por celebrar a vida de inúmeras 
+         personalidades importantes da cultura popular que a escola merece ser reconhecida por suas boas práticas educacionais.
+        </p><br>
+        <p> <b><em>“A gente quer jogar luz nas coisas fantásticas que essas pessoas fizeram para que as crianças negras
+             tenham orgulho da sua ancestralidade e que as crianças brancas… elas cresçam sem se sentir superiores
+              às demais.”</em></b><br> Viviane Vieira, Coordenadora Pedagógica</p><br>    
+    <div style="text-align: center;">
+    <img src="static/images/emei_cruz/1.jpg" style="width: 60%; height: auto;"/>
+    <p style="font-size: 20px;">Fonte: acervo pessoal, 2024.</p>
+    </div> <br>
+        <b>Endereço:</b> R. Henrique da Costa, 348 - Jardim Itacolomi, São Paulo - 04386-000 <br>
+        <b>Telefone:</b> (11) 5816-3701<br>
+        <a href="https://www.instagram.com/ciejacampolimpo?igsh=MXM5eDkxcTRncG42MA==" target="_blank" style="font-size: 24px; color: blue;">Instagram</a> <br>
+    <h3><b>A cara do EMEI Cruz e Sousa:</b></h3>
+    <p>A EMEI da forma como a conhecemos foi resultado de um longo processo de formação e reconstrução da equipe escolar. 
+        Hoje podemos dizer que as crianças que estudam lá vão ter um grande repertório dentro da cultura popular, vão conhecer 
+        de forma muito pessoal grandes mestres(as) populares, pesquisadores(as), escritores(as), músicos(as) e todas as contribuições
+         culturais que eles deixaram no mundo.</p>
+         <div style="text-align: center;">
+            <img src="static/images/emei_cruz/2.jpg" style="width: 40%; height: auto;"/>
+            <p style="font-size: 20px;">Fonte: acervo pessoal, 2024.</p>
+            </div> <br>
+    <h3><b>Projetos</b></h3>  
+    <li><b>Aniversariantes do Mês Personalidades Negras e Indígenas:</b> Todo mês o corpo docente junto aos estudantes 
+        escolhem uma personalidade que faz aniversário no mês em questão para poder conhecer. Os alunos mergulham 
+        nas histórias de forma autêntica e significativa, cada turma com  seu recorte, uma vez que escolhem diferentes
+         aspectos para pesquisar. Alguns exemplos estudados foram Eliane Potiguara, Joênia Wapichana e Kiusam de Oliveira,
+          que esteve presente na escola para conhecer as crianças que estudaram sobre ela. Os alunos foram convidados a virem 
+          com penteados especiais, inspirados pela obra “Com Qual Penteado Eu Vou?” da autora.
+        “Entendendo que essas histórias elas tiveram fora dos currículos, que são histórias que a gente 
+        não estudou na nossa primeira formação. E que se a gente também não cuidar das nossas crianças de hoje, 
+        elas também não vão saber quem são essas pessoas e essas histórias. E a gente continua reproduzindo uma 
+        única história.” Viviane Vieira, Coordenadora Pedagógica</li>
+    <br>       
+    <div style="text-align: center;">
+        <img src="static/images/emei_cruz/3.jpg" style="width: 40%; height: auto;"/>
+        <p style="font-size: 20px;">Fonte: acervo pessoal, 2024.</p>
+        </div> <br>
+    <div style="text-align: center;">
+        <img src="static/images/emei_cruz/4.jpg" style="width: 40%; height: auto;"/>
+        <p style="font-size: 20px;">Fonte: acervo pessoal, 2024.</p>
+        </div> <br>
+    <div style="text-align: center;">
+        <img src="static/images/emei_cruz/5.jpg" style="width: 40%; height: auto;"/>
+        <p style="font-size: 20px;">Fonte: acervo pessoal, 2024.</p>
+        </div> <br>
+    <li><b>Biblioteca Circulante:</b> Toda sexta-feira as crianças levam para casa um livro para ler com as famílias no 
+        final de semana e esses livros selecionados que passam pela peneira de ter títulos e autores que sejam negros e indigenas.</li> 
+    <li><b>Festa da Cultura:</b> A conhecida "Festa Junina" se transformou na Festa da Cultura, uma vez que o corpo docente sentiu de parar 
+        toda a pesquisa que estava sendo desenvolvida para ensaiar uma música junina para dançar para as famílias. Então a festa foi caminhando
+         para manter uma conversa com esse projeto maior da escola. E se tornou uma celebração viva com diversas manifestações culturais,
+          como capoeira, maracatu e contação de histórias.</li> <br>
+    
+    <div id="local4"><h1>EMEI Feitiço da Vila - ADÉBÓYÈ?</h1></div>
+    <p>Está por trás da EMEI uma gestão que tem uma grande preocupação em decolonizar o currículo, 
+        passar uma peneira em todas as práticas e atividades a fim de pensar se a prática promove equidade
+         racial e se não, o que a escola pode fazer para atingir esse propósito. É uma missão da gestão que 
+         a instituição seja uma escola de educação infantil antirracista nos mínimos detalhes. 
+    </p>
+    <p> <b><em>“A gente tá aqui pra descolonizar o currículo.”</em></b><br> Juciele Nobre, Diretora</p><br>
+    <p>Diariamente a equipe promove ações para colocar a presença do corpo negro de forma afirmativa, proporcionar experiências 
+        que ampliem o repertório da criança a fim de tentar mudar esse imaginário coletivo que a gente tem, a EMEI vai trazer 
+        outros livros, materiais, brinquedos e outras narrativas</p>
+    <br>
+    <b>Endereço:</b> Rua Feitiço da Vila, 399 - Chácara Santa Maria
+    <br>
+    <b>Telefone:</b> (11) 33976634<br>
+    <h3><b>A cara do EMEI Feitiço da Vila:</b></h3>
+    <p>Uma marca da organização da EMEI são os contextos investigativos. Os temas de estudo, que surgem do interesse 
+        e da escuta das crianças, são explorados sempre a partir da montagem de um contexto de investigação. 
+        Esse contexto está presente na Sala Maker para as crianças e nas salas de estudos dos professores, sendo 
+        uma maneira de organizar os materiais estéticamente, de um jeito poético e detalhista revelando possíveis 
+        maneiras de explorar o tema. Os contextos estão presentes até em saídas e reuniões pedagógicas, fazendo parte da cultura da escola.
+    </p>
+    <p> <b><em>“Quando a equipe gestora, e a coordenação pedagógica se propõe a fazer, a gente consegue alcançar alguns 
+        educadores e algumas educadoras, o ambiente vai se fortalecendo nesse sentido. E aí, quem realmente não dá conta,
+         não consegue engolir seu racismo, não fica.”</em></b><br> Juciele Nobre, Diretora</p><br>
+    <h3><b>Práticas</b></h3>  
+    <li><b>Projeto colaborativo dos Erês Brincantes:</b> Esse projeto acontece em todas as salas através dos Erês Brincantes, 
+        que são bonecas e bonecos de pano que a escola recebeu através da prefeitura. Depois de receber fizeram um levantamento,
+         com os nomes e as origens de cada um deles. Logo esses bonecos começaram a visitar as casas das crianças. Por uma questão,
+          inclusive, de valorização do tratamento do que é o indivíduo negro, do que é o corpo negro a instituição construiu slings,
+           para que as crianças pudessem tratar afetuosamente esse boneco representando ali as pessoas negras.
+    </li><br>
+    <div style="text-align: center;">
+        <img src="static/images/emei_feitico/1.jpg" style="width: 40%; height: auto;"/>
+        <p style="font-size: 20px;">Fonte: acervo pessoal, 2024.</p>
+        </div> <br>
+    <li><b>Protocolo antirracista:</b> Consiste basicamente em modos de agir diante de situações de racismo,
+         essas ações são pensadas coletivamente atraves de situações do cotidiano escolar. É sobre pensar sobre essas coisas antes que elas aconteçam,
+          como por exemplo: a criança ofendeu/xingou a outra. O protocolo pensa como agir em todos os sentidos,
+           uma vez que refletem só nessas situações sobre os seguintes pontos: Como conversar com essa criança?
+            Quais caminhos para essa conversa? Foi uma situação reiterada? Violenta? Vamos chamar as famílias? 
+            Como é que vai ser feito o acolhimento da criança que sofreu essa violência? Como é que vai ser feita
+             a conversa com a turma? Precisa da intervenção da gestão da escola?
+    </li>
+    <li><b>Bonecas pretas:</b> a escola só tem e compra quando necessário bonecas pretas,
+         umas vez que a escola está no lugar de proporcionar para a criança experiências que ela não teria acesso em casa.
+   </li><br>
+   <div style="text-align: center;">
+    <img src="static/images/emei_feitico/2.jpg" style="width: 40%; height: auto;"/>
+    <p style="font-size: 20px;">Fonte: acervo pessoal, 2024.</p>
+    </div> <br>
+    <li><b>Festa das tradições:</b> Acontece em Junho e tem a perspectiva de valorizar a cultura popular brasileira e seus artistas.
+         Para além disso, refletir com as pessoas sobre o que é e quais são as tradições brasileiras e quem são os povos tradicionais brasileiros.
+          Em 2024, ao invés de pularem quadrilha, homenagearam o samba e Martinho da Vila.
+  </li><br>
+  <h3><b>Projeto Pequenos Leitores:</b></h3>  
+  <li><b>Festa das tradições:</b> Acontece em Novembro e mostra pedagógica, que consiste em uma exposição dos trabalhos das crianças ao longo do ano.
+</li>
+<li><b>Adébóyè:</b> A palavra Adébóyè vem do Yorubá e ela significa: A realeza encontra sua graça, 
+    sua honra. É um desfile das crianças para as famílias, que acontece em Novembro, é um momento de valorização da realeza, 
+    uma ação afirmativa. A EMEI tem uma parceria com a boutique Semente Crioula de uma afroempreendedora que traz roupas infantis,
+     feitas com tecidos e estamparias de culturas africanas. Também vem maquiador, cabeleireiro, transistas, para os cabelos das crianças.
+</li><br>
+<p> <b><em>“A escola tem tido um aumento dos Black Powers. Numa situação de corredor, a gente ia interagindo com as crianças e uma criança 
+    branca de olhos claros chegou até a coordenadora que estava conversando com um menino com Black Power. E essa menina fala, você já pegou 
+    no cabelo dele? É tão fofinho, parece uma nuvem. E a gente ficou tão feliz com esse comentário, porque seria muito natural ouvir o contrário disso.
+     E ela conseguiu construir elementos onde ela olha para aquele cabelo e enxerga ele como macio, como uma nuvem. E isso foi para a gente um sintoma,
+      um sinalizador de que a gente está conseguindo passar para as crianças as mensagens que a gente quer.”</em></b><br> Juciele Nobre, Diretora</p><br>
+      <div style="text-align: center;">
+        <img src="static/images/emei_feitico/3.jpg" style="width: 40%; height: auto;"/>
+        <p style="font-size: 20px;">Fonte: acervo pessoal, 2024.</p>
+        </div> <br>
+        <div style="text-align: center;">
+            <img src="static/images/emei_feitico/4.jpg" style="width: 40%; height: auto;"/>
+            <p style="font-size: 20px;">Fonte: acervo pessoal, 2024.</p>
+            </div> <br>
+            <div style="text-align: center;">
+                <img src="static/images/emei_feitico/5.jpg" style="width: 40%; height: auto;"/>
+                <p style="font-size: 20px;">Fonte: acervo pessoal, 2024.</p>
+                </div> <br>
+    <div id="local5"><h1>EMEI Jardim Premiano - IDENTIDADE </h1> </div>
+    <p>Localizada em uma região periférica da zona leste, bairro que ocupa a antepenúltima colocação na
+         expectativa de vida de São Paulo, a EMEI Jardim Premiano possui práticas e formações para as relações etnico
+          raciais valorizando a construção da identidade de cada criança. Devido ao incêndio que ocorreu no bairro da 
+          Vila Prudente, foram construídos conjuntos habitacionais, CDHU Iguatemi, destinados às pessoas que perderam suas casas.
+           A EMEI foi construída em 2008, após reivindicações desses primeiros moradores. Com  projetos conhecidos e divulgados na mídia,
+            fomos conhecer a escola e entendemos que a mesma deveria aparecer nesse site. O principal e mais conhecido é o projeto Identidade,
+             que foi idealizado em 2023 mas que é sempre revisitado pelo corpo docente.
+    </p>    
+
+    <b>Endereço:</b> Avenida do Progresso, 150 - Jardim Marilu, São Paulo
+    <br>
+    <b>Telefone:</b> (11) 2735-0038<br>
+    <h3><b>A cara do EMEI Jardim Premiano:</b></h3>
+    <p>Uma marca da organização da EMEI são os contextos investigativos. Os temas de estudo, que surgem do interesse e da escuta das crianças, são explorados sempre a partir da montagem de um contexto de investigação. Esse contexto está presente na Sala Maker para as crianças e nas salas de estudos dos professores, sendo uma maneira de organizar os materiais estéticamente, de um jeito poético e detalhista revelando possíveis maneiras de explorar o tema. Os contextos estão presentes até em saídas e reuniões pedagógicas, fazendo parte da cultura da escola.</p>
+    <p> <b><em>“Então o projeto Identidade, ele visou através de algumas estratégias da educação infantil, por exemplo, a investigação, fazer com que a criança observasse a si mesma e os demais, para que ela criasse um olhar positivo sobre as suas próprias características, porque historicamente a textura do cabelo e a cor da pele trouxeram uma série de estigmas para quem os carregava. A ideia da escola agora é trazer essa diversidade, mostrar para a criança que a diversidade faz parte, que é uma característica inerente da humanidade e que precisa ser valorizada.”</em></b><br> (Coordenadora da EMEI Jardim Premiano) 
+        </p><br>
+        <h3><b>Práticas</b></h3>  
+        <li><b>Projeto Identidade:</b> O projeto Identidade surgiu da escuta ativa das crianças e partindo dos principios do Curriculo Antirracista. O objetivo do projeto era fazer com que as crianças se conhecessem e percebessem a diversidade através de suas identidades. O projeto envolveu momentos como: conhecer a si mesmo, conhecer o outro, conhecer os tons de pele, conhecer seu território e conhecer sua comunidade.
+            Conhecer a si mesmo: as crianças desenharam no papel vegetal em cima de uma foto de seus rostos em preto e branco, reconhecendo seus traços de sua fisionomia. Perceberam formatos dos olhos, cor e textura do cabelo, contorno do rosto, espessura do nariz e dos lábios. <br>
+            Conhecer o outro: as crianças desenharam o contorno dos colegas verticalmente no papel plástico, percebendo agora a fisionomia do outro. <br>
+            Conhecer os tons de pele: Em um contexto com espelhos, fotos, pinceis, cotonetes e tintas, as crianças foram convidadas a encontrarem seu tom de pele a partir das tintas.O projeto Humanae da Angelica Dass foi utilizado como inspiração pela professora. Após descobrirem seu tom de pele, as crianças fizeram seu auto retrato no espelho. 
+            Conhecer o território: Leitura do livro “Da Minha Janela” de Otavio Junior e rodas de conversa sobre casas e moradias. As crianças foram convidadas a fazer desenhos de observação partindo de imagens de moradias. 
+        </li><br>
+        <li><b>Projeto Migrantes:</b> Usando princípios do Currículo dos Povos Migrantes, o projeto tem como objetivo ampliar o conhecimento sobre hábitos e costumes dos povos migrantes além de conversar com o projeto Identidade de conhecer a si mesmo e seu lugar de nascença, envolvendo os educadores, as famílias das crianças e as crianças. <br>
+            O projeto envolve a construção de contextos sobre os povos migrantes,  pesquisa com as famílias sobre suas origens. Rodas de conversa com as crianças sobre as diversidades culturais e leitura de livros temáticos sobre o assunto. 
+        </li><br>
+    <div style="text-align: center;">
+        <img src="static/images/emei_jardim/1.png" style="width: 40%; height: auto;"/>
+        <p style="font-size: 20px;">Fonte: Projeto Político-Pedagógico EMEI Jardim Premiano, 2024.</p>
+        </div> <br>
+        <div style="text-align: center;">
+            <img src="static/images/emei_jardim/2.png" style="width: 40%; height: auto;"/>
+            <p style="font-size: 20px;">Fonte: Projeto Político-Pedagógico EMEI Jardim Premiano, 2024.</p>
+            </div> <br>    
+            <div style="text-align: center;">
+                <img src="static/images/emei_jardim/3.png" style="width: 40%; height: auto;"/>
+                <p style="font-size: 20px;">Fonte: Projeto Político-Pedagógico EMEI Jardim Premiano, 2024.</p>
+                </div> <br>   
+                <div style="text-align: center;">
+                    <img src="static/images/emei_jardim/4.png" style="width: 40%; height: auto;"/>
+                    <p style="font-size: 20px;">Fonte: Projeto Político-Pedagógico EMEI Jardim Premiano, 2024.</p>
+                    </div> <br>        
+</div>
+<div id="index-jumbotron"></div>
+
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const hash = window.location.hash;
+        if (hash) {
+            setTimeout(() => {
+                const targetElement = document.querySelector(hash);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 700); // Tempo ajustado para garantir o carregamento completo
+        }
+    });
+    </script>
+
+{% endblock %}

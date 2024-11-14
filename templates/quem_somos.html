@@ -1,0 +1,99 @@
+{% extends 'layout.html' %}
+{% block body %}
+<style>
+   body {
+       margin: 0;
+       background-image: url(static/images/banner_index.jpg);
+       background-repeat: repeat; /* Faz com que a imagem de fundo se repita */
+       background-size: auto;
+   }
+
+   .jumbotron {
+       background-color: rgb(242, 163, 27); /* Fundo levemente transparente */
+       padding: 50px;
+       border-radius: 10px;
+       z-index: 1;
+       position: relative;
+   }
+
+   .text-content {
+       font-family: Arial, sans-serif; /* Fonte fácil de ler */
+       font-size: 24px; /* Tamanho grande para facilitar a leitura */
+       color: #000; /* Cor preta para o texto */
+       text-align: justify; /* Justificação do texto */
+       padding: 20px;
+       line-height: 1.6; /* Altura da linha para melhorar a legibilidade */
+       background-color: rgb(241, 230, 188); /* Fundo branco suave para contraste */
+       border-radius: 10px;
+       margin: 20px;
+   }
+
+   .text-content p {
+       text-indent: 50px; /* Recuo no início do parágrafo */
+   }
+
+   .button-container {
+       display: flex;
+       justify-content: center;
+       margin-top: 20px; /* Espaço entre o texto e o botão */
+   }
+
+   .btn-primary {
+       background-color: rgba(232, 246, 142, 1);
+       color: #040404;
+       z-index: 10;
+       position: relative;
+       border-color: #000000;
+       font-size: 34px;
+       padding: 10px 60px;
+   }
+
+   .btn-primary:hover {
+       background-color: #0095ff;
+       border-color: #5a3e2e;
+   }
+
+   /* Adiciona a animação de fade-in */
+   .fade-in {
+       opacity: 0;
+       transition: opacity 1s ease-in;
+   }
+
+   .fade-in-visible {
+       opacity: 1;
+   }
+</style>
+
+<div class="jumbotron text-center fade-in">
+   <p class="lead" style="font-size: 50px;">Quem Somos</p>
+</div>
+
+<div class="text-content fade-in">
+   <p>Esse projeto foi idealizado para compor o trabalho de conclusão de curso de quatro estudantes de Pedagogia do Instituto Singularidades. 
+   </p>
+<br>
+   <p>Beatriz - Bia: Tenho 28 anos e sou apaixonada na primeira infância. Estar ao redor de crianças é algo que me traz muito encantamento por trás de todo o aprendizado. Sou uma adulta brincante, apaixonada por literatura infantil. Também sou mãe do Gael, que tem 1 ano de vida e por ele tento lutar por uma escola mais acolhedora e respeitosa para todos os corpos.
+</p>
+<br>
+   <p>Carolina - Lina: Sou uma mulher branca, cisgênero e mãe da Luna. Entrei na pedagogia pela paixão em aprender e acompanhar o desenvolvimento infantil e me encontrei na EJA por acreditar que a educação precisa ser garantida a todos, principalmente quando lhe foi negada por um sistema excludente.
+</p>
+<br>
+   <p>Laize - Lai: Sou uma mulher branca, cisgênero, filha da Margarete e do Almir, neta da Maria de Lourdes e irmã do Leonardo, do Jeferson e do Julio Cesar. Sou loucamente apaixonada pelas culturas e riquezas que a natureza do Brasil possui e amo viajar para conhecer os pedacinhos de terra deste país. Movida pelo desejo de ver meus semelhantes viverem em boas condições, encontrei na Educação possíveis caminhos para lutar por justiça social e sempre esperançar, como diria Paulo Freire. 
+</p>
+<br>
+   <p>
+    Vivian - Vivi: Sou Vivian, uma mulher branca, cisgênero de 21 anos. Filha de Patricia Helena, neta de Vera Helena e Anésia e irmã de Arthur. Sou paulistana, apaixonada por viajar e conhecer novas culturas, por descobrir e apreciar diferentes manifestações artísticas e culturais. Venho de uma família bem unida de educadores e faço pedagogia por acreditar em uma educação democrática e de qualidade para todos.     
+</p>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const elements = document.querySelectorAll('.fade-in');
+        elements.forEach((el, index) => {
+            setTimeout(() => {
+                el.classList.add('fade-in-visible');
+            }, index * 500); // Cada bloco aparece com 1 segundo de intervalo
+        });
+    });
+</script>
+{% endblock %}

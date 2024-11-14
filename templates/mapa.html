@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>
+        L_NO_TOUCH = false;
+        L_DISABLE_3D = false;
+    </script>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>
+        #map_1bd8d56a5ec88d4bb427f08feb1641b0 {
+            position: relative;
+            width: 100.0%;
+            height: 100.0%;
+            left: 0.0%;
+            top: 0.0%;
+        }
+        .leaflet-container { font-size: 1rem; }
+        .center-map-btn {
+            position: absolute;
+            top: 10px;
+            left: 104px;
+            z-index: 1000;
+            background: white;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .voltar-btn {
+            position: absolute;
+            top: 10px;
+            left: 45px;
+            z-index: 1000;
+            background: white;
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="folium-map" id="map_1bd8d56a5ec88d4bb427f08feb1641b0"></div>
+    <div class="center-map-btn" id="center-map-btn">Centralizar Mapa</div>
+    <div class="voltar-btn" id="voltar-btn">Voltar</div>
+</body>
+<script>
+    var map_1bd8d56a5ec88d4bb427f08feb1641b0 = L.map(
+        "map_1bd8d56a5ec88d4bb427f08feb1641b0",
+        {
+            center: [-23.5505, -46.6333],
+            crs: L.CRS.EPSG3857,
+            zoom: 10.5,
+            zoomControl: true,
+            preferCanvas: false,
+        }
+    );
+
+    var tile_layer_7928ef5d7de7472f5cf487084be17d00 = L.tileLayer(
+        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+    );
+
+    tile_layer_7928ef5d7de7472f5cf487084be17d00.addTo(map_1bd8d56a5ec88d4bb427f08feb1641b0);
+
+var marker_1 = L.marker(
+        [-23.407777465762358, -46.75957192289369],
+        {}
+    ).addTo(map_1bd8d56a5ec88d4bb427f08feb1641b0);
+
+    marker_1.bindPopup(`
+    <div>
+        <h2>CIEJA PERUS</h2>
+        <img src="https://lh3.googleusercontent.com/p/AF1QipNI2RlfWN9aykh488QCKYkvpRBmhLrfFE8ZF4Ju=s1360-w1360-h1020" alt="R" width="200" height="160"/>
+        <br><br>
+        <a href="/as_praticas" style="font-size: 20px; color: blue;">Mais Informações</a>
+    </div>
+`);
+var marker_2 = L.marker(
+        [-23.5598815267214, -46.62441140338601],
+        {}
+    ).addTo(map_1bd8d56a5ec88d4bb427f08feb1641b0);
+
+    marker_2.bindPopup(`
+    <div>
+        <h2>CIEJA Cambuci</h2>
+        <img src="https://acaoeducativa.org.br/redeantirracista/wp-content/uploads/2019/04/cieja.jpg" alt="R" width="200" height="160"/>
+        <br><br>
+        <a href="/as_praticas#local2" style="font-size: 20px; color: blue;">Mais Informações</a>
+    </div>
+`);
+var marker_3 = L.marker(
+        [-23.658931247775502, -46.7638560033832],
+        {}
+    ).addTo(map_1bd8d56a5ec88d4bb427f08feb1641b0);
+
+    marker_3.bindPopup(`
+    <div>
+        <h2>CIEJA Campo Limpo</h2>
+        <img src="https://relatosescolares.com.br/wp-content/uploads/2022/06/Imagem-1.jpg" alt="R" width="200" height="160"/>
+        <br><br>
+        <a href="/as_praticas#local6" style="font-size: 20px; color: blue;">Mais Informações</a>
+    </div>
+`);
+var marker_4 = L.marker(
+        [-23.54132075574459, -46.50440773222195],
+        {}
+    ).addTo(map_1bd8d56a5ec88d4bb427f08feb1641b0);
+
+    marker_4.bindPopup(`
+    <div>
+        <h2>EMEI Luiz Gomes Cardim Sangirardi</h2>
+        <img src="https://lh3.googleusercontent.com/p/AF1QipMw0GD__5Xw0WAjxEQ8qlTA2wiB7YfgEXUyjbs2=s1360-w1360-h1020" alt="R" width="200" height="160"/>
+        <br><br>
+        <a href="/as_praticas#local1" style="font-size: 20px; color: blue;">Mais Informações</a>
+    </div>
+`);
+var marker_5 = L.marker(
+        [-23.686389528673594, -46.794928645152666],
+        {}
+    ).addTo(map_1bd8d56a5ec88d4bb427f08feb1641b0);
+
+    marker_5.bindPopup(`
+    <div>
+        <h2>EMEI Feitiço da Vila</h2>
+        <img src="https://lh3.googleusercontent.com/p/AF1QipMSV-jY2DXUsetbrGSfKSGb0REsrm7_UayMNmh0=s1360-w1360-h1020" alt="R" width="200" height="160"/>
+        <br><br>
+        <a href="/as_praticas#local4" style="font-size: 20px; color: blue;">Mais Informações</a>
+    </div>
+`);
+var marker_6 = L.marker(
+        [-23.66261587489632, -46.652004316876834],
+        {}
+    ).addTo(map_1bd8d56a5ec88d4bb427f08feb1641b0);
+
+    marker_6.bindPopup(`
+    <div>
+        <h2>EMEI Cruz e Sousa</h2>
+        <img src="https://lh3.googleusercontent.com/p/AF1QipMSV-jY2DXUsetbrGSfKSGb0REsrm7_UayMNmh0=s1360-w1360-h1020" alt="R" width="200" height="160"/>
+        <br><br>
+        <a href="/as_praticas#local3" style="font-size: 20px; color: blue;">Mais Informações</a>
+    </div>
+`);
+var marker_7 = L.marker(
+        [-23.59732713496157, -46.4202320205744],
+        {}
+    ).addTo(map_1bd8d56a5ec88d4bb427f08feb1641b0);
+
+    marker_7.bindPopup(`
+    <div>
+        <h2>EMEI Jardim Premiano</h2>
+        <img src="https://lh3.googleusercontent.com/p/AF1QipNgvqf2z7xu3o8k8ttxNgMXMbujAVUYJyK2OwzW=s1360-w1360-h1020" alt="R" width="200" height="160"/>
+        <br><br>
+        <a href="/as_praticas#local5" style="font-size: 20px; color: blue;">Mais Informações</a>
+    </div>
+`);
+    // Função para centralizar o mapa
+    document.getElementById('center-map-btn').onclick = function() {
+        map_1bd8d56a5ec88d4bb427f08feb1641b0.setView([-23.5505, -46.6333], 10.5);
+    };
+
+    // Função para voltar à página inicial
+    document.getElementById('voltar-btn').onclick = function() {
+        window.location.href = "/";
+    };
+</script>
+</html>

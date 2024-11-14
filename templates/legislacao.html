@@ -1,0 +1,96 @@
+{% extends 'layout.html' %}
+{% block body %}
+<style>
+   body {
+       margin: 0;
+       background-image: url(static/images/banner_index.jpg);
+       background-repeat: repeat; /* Faz com que a imagem de fundo se repita */
+       background-size: auto;
+   }
+
+   .jumbotron {
+       background-color: rgb(242, 163, 27); /* Fundo levemente transparente */
+       padding: 50px;
+       border-radius: 10px;
+       z-index: 1;
+       position: relative;
+   }
+
+   .text-content {
+       font-family: Arial, sans-serif; /* Fonte fácil de ler */
+       font-size: 24px; /* Tamanho grande para facilitar a leitura */
+       color: #000; /* Cor preta para o texto */
+       text-align: justify; /* Justificação do texto */
+       padding: 20px;
+       line-height: 1.6; /* Altura da linha para melhorar a legibilidade */
+       background-color: rgb(241, 230, 188); /* Fundo branco suave para contraste */
+       border-radius: 10px;
+       margin: 20px;
+   }
+
+   .text-content p {
+       text-indent: 50px; /* Recuo no início do parágrafo */
+   }
+
+   .button-container {
+       display: flex;
+       justify-content: center;
+       margin-top: 20px; /* Espaço entre o texto e o botão */
+   }
+
+   .btn-primary {
+       background-color: rgba(232, 246, 142, 1);
+       color: #040404;
+       z-index: 10;
+       position: relative;
+       border-color: #000000;
+       font-size: 34px;
+       padding: 10px 60px;
+   }
+
+   .btn-primary:hover {
+       background-color: #0095ff;
+       border-color: #5a3e2e;
+   }
+
+   /* Adiciona a animação de fade-in */
+   .fade-in {
+       opacity: 0;
+       transition: opacity 1s ease-in;
+   }
+
+   .fade-in-visible {
+       opacity: 1;
+   }
+</style>
+
+<div class="jumbotron text-center fade-in">
+   <p class="lead" style="font-size: 50px;">Legislação</p>
+</div>
+
+<div class="text-content fade-in">
+ <p>Sabemos que muitas das ações humanas em uma sociedade são orientadas e baseadas em leis. Na Educação brasileira existem algumas normas que devem ser seguidas, e por isso dizemos que são documentos com caráter normativo, enquanto existem documentos que são orientadores, o que aqui diremos que possuem caráter orientador. 
+</p>
+<p>
+    Abaixo falaremos um pouco dessa caminhada rumo à garantia de direitos dentro da Educação, com um olhar mais atento ao que as Leis e documentos dizem sobre as relações étnico-raciais, tema central de nossa pesquisa.
+</p>
+<p>Analisando a legislação brasileira quanto à frente educativa, veremos que a Constituição de 1988, documento que surge como garantidor de direitos depois da Ditadura Militar Brasileira, é o primeiro documento nacional que aponta o direito de todo sujeito a ter acesso à Educação. Em 1996, é promulgada a Lei de Diretrizes e Bases (LDB) 9.394, primeiro documento com caráter normativo que regulariza e define como será a oferta da educação no país. Contudo, a temática das relações étnico-raciais não aparece no documento, o que faz com que em 2003 a LDB seja alterada pela Lei 10.639, incluindo a obrigatoriedade do ensino da história e cultura afro-brasileira e africana, e em 2008 seja novamente alterada pela Lei 11.645, incluindo também o ensino da história e cultura indígena. É importante ressaltar que durante toda esta trajetória o Movimento Negro desempenhou papel importante nas articulações das questões anti racistas para a Educação. 
+</p>
+<p>Em 2004 é publicada as Diretrizes Curriculares Nacionais para a Educação das Relações Étnico-Racial e para o Ensino de História e Cultura Afro-brasileira e Africana (DCNERER) que vem em caráter orientador para apresentar possíveis caminhos de se trabalhar a temática dentro das escolas. Em 2010, também é publicada a Diretriz Curricular Nacional da Educação Infantil (DCNEI), que vem orientar as práticas pedagógicas especificamente com as crianças da Educação Infantil. 
+</p>
+<p>No ano de 2017 é promulgada A Base Nacional Comum Curricular, documento nacional de caráter normativo, que define e garante os aprendizados e as habilidades comuns fundamentais para o pleno desenvolvimento escolar. Apesar de ter algumas lacunas, como não abordar conteúdos para as relações étnico-raciais especificamente, é um importante marco na Educação, visto que torna obrigatório que os currículos estaduais e municipais tenham como base os conhecimentos e habilidades estabelecidas no escrito. </p>
+<p>Em 2022, na cidade de São Paulo, são desenvolvidos e publicados dois importantes documentos: Currículo da Cidade Antirracista - Povos Afro Brasileiros e Currículo da Cidade - Povos Indígenas. Com o objetivo de repertoriar as ações pedagógicas na Rede Educacional do município de São Paulo, estes dois currículos trazem boas referências teóricas e práticas de como os temas podem ser abordados nas aulas, de maneira a valorizar suas culturas e histórias e não apenas entrar em contato em datas comemorativas, como no Dia dos Povos Indígenas e no Dia da Consciência Negra.
+</p>    	
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const elements = document.querySelectorAll('.fade-in');
+        elements.forEach((el, index) => {
+            setTimeout(() => {
+                el.classList.add('fade-in-visible');
+            }, index * 500); // Cada bloco aparece com 1 segundo de intervalo
+        });
+    });
+</script>
+{% endblock %}

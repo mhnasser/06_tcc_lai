@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mapa</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  </head>
+  <body>
+    <!-- Incluindo a barra de navegação -->
+    {% include 'includes/nav_bar.html' %}
+    
+    <!-- Container para o conteúdo da página -->
+    <div class="container">
+      {% include 'includes/messages.html' %}
+      <!-- Bloco para o conteúdo da página -->
+      {% block body %}{% endblock %}
+    </div>
+
+    <!-- Scripts do Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
