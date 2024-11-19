@@ -1,7 +1,36 @@
-<nav class="navbar navbar-inverse">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Responsiva</title>
+  <!-- Link do Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <style>
+    /* Estilo responsivo para a navbar */
+    .navbar-nav > li > a {
+      font-size: 2vw; /* Tamanho dinâmico por padrão */
+    }
+
+    @media (max-width: 768px) {
+      .navbar-nav > li > a {
+        font-size: 14px; /* Ajuste para tablets */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .navbar-nav > li > a {
+        font-size: 12px; /* Ajuste para celulares */
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
         <!-- Pode adicionar logotipo ou outros itens aqui -->
+        <a class="navbar-brand" href="/">Logo</a>
       </div>
       <ul class="nav navbar-nav">
         <li><a href="/">Manifesto</a></li>
@@ -12,3 +41,9 @@
       </ul>
     </div>
   </nav>
+
+  <!-- Link do Bootstrap JS e jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
