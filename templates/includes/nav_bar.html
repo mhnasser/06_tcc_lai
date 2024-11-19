@@ -3,47 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbar Responsiva</title>
-  <!-- Link do Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <title>Navbar Lateral</title>
   <style>
-    /* Estilo responsivo para a navbar */
-    .navbar-nav > li > a {
-      font-size: 2vw; /* Tamanho dinâmico por padrão */
+    /* Estilização geral */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
     }
 
-    @media (max-width: 768px) {
-      .navbar-nav > li > a {
-        font-size: 14px; /* Ajuste para tablets */
-      }
+    /* Navbar escondida por padrão */
+    .side-navbar {
+      height: 100%;
+      width: 0; /* Inicialmente escondida */
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #222;
+      overflow-x: hidden;
+      transition: 0.5s; /* Animação para abrir/fechar */
+      padding-top: 60px;
     }
 
-    @media (max-width: 480px) {
-      .navbar-nav > li > a {
-        font-size: 12px; /* Ajuste para celulares */
-      }
+    /* Links da navbar */
+    .side-navbar a {
+      padding: 10px 15px;
+      text-decoration: none;
+      font-size: 20px; /* Tamanho fixo */
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    /* Efeito ao passar o mouse sobre os links */
+    .side-navbar a:hover {
+      background-color: #575757;
+    }
+
+    /* Quando o mouse passar pela borda */
+    .side-navbar:hover {
+      width: 250px; /* Largura ao exibir */
+    }
+
+    /* Conteúdo principal */
+    .main-content {
+      margin-left: 0;
+      transition: margin-left 0.5s;
+      padding: 20px;
     }
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <!-- Pode adicionar logotipo ou outros itens aqui -->
-        <a class="navbar-brand" href="/">Logo</a>
-      </div>
-      <ul class="nav navbar-nav">
-        <li><a href="/">Manifesto</a></li>
-        <li><a href="/legislacao">Legislação</a></li>
-        <li><a href="/refs">Referências</a></li>
-        <li><a href="/quem_somos">Quem somos</a></li>
-        <li><a href="/as_praticas">As Práticas</a></li>
-      </ul>
-    </div>
-  </nav>
+  <!-- Navbar lateral -->
+  <div class="side-navbar">
+    <a href="/">Manifesto</a>
+    <a href="/legislacao">Legislação</a>
+    <a href="/refs">Referências</a>
+    <a href="/quem_somos">Quem somos</a>
+    <a href="/as_praticas">As Práticas</a>
+  </div>
 
-  <!-- Link do Bootstrap JS e jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Conteúdo principal -->
+  <div class="main-content">
+    <h1>Bem-vindo</h1>
+    <p>Menu</p>
+  </div>
 </body>
 </html>
